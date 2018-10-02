@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **int** | The Storecove assigned id for the LegalEntity. | [optional] 
 **party_name** | **string** | The name of the company. | [optional] 
 **line1** | **string** | The first address line. | [optional] 
 **line2** | **string** | The second address line, if applicable | [optional] 

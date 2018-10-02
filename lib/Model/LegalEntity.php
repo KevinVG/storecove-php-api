@@ -57,6 +57,7 @@ class LegalEntity implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
         'party_name' => 'string',
         'line1' => 'string',
         'line2' => 'string',
@@ -73,6 +74,7 @@ class LegalEntity implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'id' => 'int64',
         'party_name' => null,
         'line1' => null,
         'line2' => null,
@@ -110,6 +112,7 @@ class LegalEntity implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'party_name' => 'party_name',
         'line1' => 'line1',
         'line2' => 'line2',
@@ -126,6 +129,7 @@ class LegalEntity implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'party_name' => 'setPartyName',
         'line1' => 'setLine1',
         'line2' => 'setLine2',
@@ -142,6 +146,7 @@ class LegalEntity implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'party_name' => 'getPartyName',
         'line1' => 'getLine1',
         'line2' => 'getLine2',
@@ -212,6 +217,7 @@ class LegalEntity implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['party_name'] = isset($data['party_name']) ? $data['party_name'] : null;
         $this->container['line1'] = isset($data['line1']) ? $data['line1'] : null;
         $this->container['line2'] = isset($data['line2']) ? $data['line2'] : null;
@@ -316,6 +322,30 @@ class LegalEntity implements ModelInterface, ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int $id The Storecove assigned id for the LegalEntity.
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets party_name
